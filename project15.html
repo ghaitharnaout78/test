@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="project15style.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div>
+            <p>Hi</p>
+            <p>Welcome to our website</p>
+            <p>Let's Start</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>THE WEBSITE</h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $(".preloader>div>p:nth-child(1)").fadeOut(1500, function() {
+                $(".preloader>div>p:nth-child(2)").fadeIn(1500).fadeOut(1500, function() {
+                    $(".preloader>div>p:nth-child(3)").fadeIn(1500).fadeOut(1500, function() {
+                        $(".preloader").fadeOut(1000);
+                    })
+                })
+            })
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>
